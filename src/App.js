@@ -84,6 +84,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Tic Tac Toe</h1>
       <div className="board">
         <Square val={board[0]} chooseSquare={() => chooseSquare(0)} />
         <Square val={board[1]} chooseSquare={() => chooseSquare(1)} />

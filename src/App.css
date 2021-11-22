@@ -2,6 +2,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 5rem 0;
   justify-content: center;
   align-items: center;
 }
@@ -9,23 +11,56 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #343a40;
+}
+
+h1 {
+  color: #e9ecef;
+  font-size: 3.5rem;
 }
 
 .board {
   width: 500px;
   height: 500px;
-  background-color: rgb(255, 215, 220);
+  background-color: #343a40;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .square {
   border-collapse: collapse;
-  border: 1px black solid;
+  border: 4px #e9ecef solid;
+  font-size: 1.5rem;
+  color: #e9ecef;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+  border-bottom: none;
+}
+
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+  border-left: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+  border-right: none;
 }
